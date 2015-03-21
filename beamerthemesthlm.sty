@@ -1,7 +1,7 @@
 % 	Name			sthlm Beamer Theme :: HEAVILY based on the hsrmbeamer theme 
 %	Author			Mark Hendry Olson :: Original Author of the hsrmbeamer theme is Benjamin Weiss 
 %
-%	Email			sayhi@hendryolson.com
+%	Email			mark@hendryolson.com
 %
 %	Website			http://hendryolson.com
 %
@@ -29,6 +29,12 @@
 %	Created 		20130731-102346
 % 
 %	Log
+%
+%			2014-07-08
+%					-Redesigned for pdfLaTeX using the New PX font
+%					-Removed all IEGS logos and backgrounds
+%					-Released as a WriteLaTeX template
+%
 %			2013-11-20
 %					- Added the ability to have columns with the same height automatically, which was 
 %					made possible with the help provided by Martin Scharrer
@@ -52,12 +58,6 @@
 
 \usepackage{eso-pic}
 
-\newif\if@doSans
-\@doSansfalse
-\DeclareOption{noserifmath}{\@doSanstrue}
-\newif\if@doNoFlama
-\@doNoFlamafalse
-\DeclareOption{noflama}{\@doNoFlamatrue}
 \newif\if@doSectionPage
 \@doSectionPagefalse
 \DeclareOption{nosectionpages}{\@doSectionPagetrue}
@@ -72,20 +72,15 @@
 \setbeamertemplate{section in toc}[sections numbered]
 \setbeamertemplate{subsection in toc}[subsections numbered]
 
-
-%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-%	CUSTOM COMMANDS
-%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-\newcommand{\rightTextArrow}{→}
-\newcommand{\quoted}[1]{›#1‹}
-\newcommand{\doublequoted}[1]{»#1«}
-
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 %	ITMEIZE
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 \setbeamertemplate{itemize item}{$\Circle$}
 \setbeamertemplate{itemize subitem}{$\circ$ }
-\setbeamertemplate{itemize subsubitem}{\rightTextArrow}
+\setbeamertemplate{itemize subsubitem}{$\circ$}
+\subsection{}
+\subsection{}
+\subsection{}
 
 \setlength{\parskip}{0.5em}
 
@@ -147,64 +142,22 @@
 \setbeamercolor{itemize subitem}{fg=sthlmLightRed}
 \setbeamercolor{itemize subsubitem}{fg=sthlmBlue}
 
-%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-%	FONTS
-%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-
-% General
-
-% Declare fontfamilys
-\if@doNoFlama%
-	% Sans serif math option
-	\if@doSans%
-	% Sans serif math
-		\usepackage{fontspec}%
-		\setmainfont{Helvetica Neue Light}%
-	\else%
-		% Serif math
-		\usefonttheme{professionalfonts}%
-		\usepackage[no-math]{fontspec}%
-	\fi%
-	
-	\newfontfamily\Light{Helvetica Neue UltraLight}%
-	\newfontfamily\Book{Helvetica Neue Bold}%
-	\newfontfamily\Medium{Helvetica Neue Medium}%
-	\setsansfont{Helvetica Neue Light}%
-\else%
-	% Sans serif math option
-	\if@doSans%
-	% Sans serif math
-		\usepackage{fontspec}%
-		\setmainfont{FlamaLight}%
-	\else%
-		% Serif math
-		\usefonttheme{professionalfonts}%
-		\usepackage[no-math]{fontspec}%
-	\fi%
-	
-	\newfontfamily\Light{FlamaLight}%
-	\newfontfamily\Book{FlamaBook}%
-	\newfontfamily\Medium{FlamaMedium}%
-	\setsansfont{FlamaLight}%
-\fi%
-
-\renewcommand\UrlFont{\Medium}
 % Titlepage
-\setbeamerfont{title}{family=\Light,size=\fontsize{20}{20}}
-\setbeamerfont{subtitle}{family=\Light,size=\fontsize{12}{14}}
+\setbeamerfont{title}{size=\fontsize{20}{20}}
+\setbeamerfont{subtitle}{size=\fontsize{12}{14}}
 \setbeamerfont{date}{size=\fontsize{8}{10}}
 \setbeamerfont{author}{size=\fontsize{12}{15}}
 \setbeamerfont{institute}{size=\fontsize{8}{10}}
 % Section
 \setbeamerfont{section title}{size=\LARGE}
 % Content
-\setbeamerfont{frametitle}{family=\Light,size=\large}
-\setbeamerfont{copyright text}{family=\Light,size=\tiny}
-\setbeamerfont{block title}{family=\Book,size=\large}
-\setbeamerfont{block title alerted}{family=\Book,size=\large}
-\setbeamerfont{alerted text}{family=\Medium}
+\setbeamerfont{frametitle}{size=\large}
+\setbeamerfont{copyright text}{size=\tiny}
+\setbeamerfont{block title}{family=\sffamily,series=\bf, size=\large}
+\setbeamerfont{block title alerted}{family=\sffamily,series=\bf, size=\large}
+\setbeamerfont{alerted text}{series=\scshape}
 % Captions
-\setbeamerfont{caption name}{family=\Book}
+\setbeamerfont{caption name}{}
 
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 %	TITLE PAGE
@@ -216,7 +169,6 @@
 \setbeamertemplate{title page}
 {
 	% Add background to title page
-  	%\AddToShipoutPictureFG*{\includegraphics[width=\paperwidth]{backgroundiegs.pdf}}
 	\AddToShipoutPictureFG*{\includegraphics[width=\paperwidth]{background.pdf}}
 	\begin{minipage}[b][\paperheight]{\textwidth}
 	%\vspace*{5mm}

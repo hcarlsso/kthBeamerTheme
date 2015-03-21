@@ -1,43 +1,46 @@
-%!TEX TS-program = xelatex 
-%         Name                        sthlm Beamer Theme
-%        Author                        Mark Hendry Olson 
+% Name				sthlm Beamer Theme
 %
-%        Email                        sayhi@hendryolson.com
+% Author			Mark Hendry Olson 
 %
-%        Website                        http://hendryolson.com
+% Email				mark@hendryolson.com
 %
-%        License                
-%                                    Copyright (C) 2013 Mark Hendry Olson
+% Website			http://hendryolson.com
 %
-%                                    This program is free software: you can redistribute it and/or modify
-%                                    it under the terms of the GNU General Public License as published by
-%                                    the Free Software Foundation, either version 3 of the License, or
-%                                    (at your option) any later version.
+% License                
 %
-%                                    This program is distributed in the hope that it will be useful,
-%                                    but WITHOUT ANY WARRANTY; without even the implied warranty of
-%                                    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-%                                    GNU General Public License for more details.
+%					This program is free software: you can redistribute it and/or modify
+% 					it under the terms of the GNU General Public License as published by
+%					the Free Software Foundation, either version 3 of the License, or
+%					(at your option) any later version.
 %
-%                                    You should have received a copy of the GNU General Public License
-%                                    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+%					This program is distributed in the hope that it will be useful,
+%					but WITHOUT ANY WARRANTY; without even the implied warranty of
+%					MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+%					GNU General Public License for more details.
 %
-%        Description                This presentation is a demonstration of the sthlm beamer 
-%                                        theme, which is HEAVILY based on the HSRM beamer theme which can be found 
-%                                        on GitHub <https://github.com/hsrmbeamertheme/hsrmbeamertheme>.
+%					You should have received a copy of the GNU General Public License
+%					along with this program.  If not, see <http://www.gnu.org/licenses/>.
+%
+% Description		This presentation is a demonstration of the sthlm beamer 
+%					theme, which is HEAVILY based on the HSRM beamer theme designed by Benjamin Weiss which can be found 
+%                  	on GitHub <https://github.com/hsrmbeamertheme/hsrmbeamertheme>.
 %                                                      
-%        Created                 20130731-102346
+% Created			20130731-102346
 % 
-%        Log
+% Log
+%					2014-07-08
+%						-Redesigned for pdfLaTeX using the New PX font
+%						-Removed all IEGS logos and backgrounds
+%						-Released as a WriteLaTeX template
 %
-%                        2013-08-01
-%                                        - Added overlay effect thanks to: <http://www.cgogolin.de/Computer.html>
+%					2013-08-01
+%						- Added overlay effect thanks to: <http://www.cgogolin.de/Computer.html>
 %
-%                         2013-07-31
-%                                        - Replaced HSRM beamer theme title page background pdf
-%                                        - Replaced HSRM beamer theme logo with IEGS apple logo
-%                                        - Redefined HSRM color theme with an ios7 color scheme
-%                                        - Changed how mini-frames show subsection progress
+%					2013-07-31
+%						- Replaced HSRM beamer theme title page background pdf
+%						- Replaced HSRM beamer theme logo with IEGS apple logo
+%						- Redefined HSRM color theme with an ios7 inspired color scheme
+%						- Changed how mini-frames show subsection progress
 
 
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
@@ -46,8 +49,8 @@
 %
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
-                \documentclass[compress]{beamer}
-                \usetheme{sthlm}
+\documentclass[compress]{beamer}
+\usetheme{sthlm}
 
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 %        LOADING BEAMER PACKAGES
@@ -65,6 +68,11 @@ tabularx,
 tikz,
 wasysym
 }
+
+\pgfplotsset{compat=1.8}
+
+\usepackage[utf8]{inputenc}
+\usepackage{newpxtext,newpxmath}
 
 \usepackage{listings}
 \lstset{ %
@@ -117,14 +125,14 @@ mindmap
 \subtitle{sthlm is based on the hsrm theme}
 \date{\small{\jobname}}
 \author{\texttt{HendryOlson.com}}
-\institute{Internationella Engelska Gymnasiet Södermalm \\ Made in {\Medium Sweden}}
+\institute{Made in \textit{Sweden}}
 
 \hypersetup{
-pdfauthor = {Mark H. Olson: mark.olson@sodermalm.engelska.se},      
+pdfauthor = {Mark H. Olson: mark@hendryolson.com},      
 pdfsubject = {Mathematics, },
 pdfkeywords = {},  
 pdfmoddate= {D:\pdfdate},          
-pdfcreator = {XeTeX with hyperref package}
+pdfcreator = {}
 }
 
 \begin{document}
@@ -199,7 +207,7 @@ pdfcreator = {XeTeX with hyperref package}
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 \begin{frame}{Primary Presentation Colors}
-The following ios7 inspired colors structure the sthlm theme.
+The following rainbow of colors brings some life to the sthlm theme.
 
 \begin{multicols}{2}
 	
@@ -308,11 +316,6 @@ The following ios7 inspired colors structure the sthlm theme.
 	\texttt{sthlmRed}
 \end{beamercolorbox}
 
-\setbeamercolor{sthlmLightBlue}{bg=sthlmLightBlue,fg=black}
-\begin{beamercolorbox}[wd=\linewidth,ht=2ex,dp=0.7ex]{sthlmLightBlue}
-	\texttt{sthlmLightBlue}
-\end{beamercolorbox}
-
 \setbeamercolor{sthlmYellow}{bg=sthlmYellow,fg=black}
 \begin{beamercolorbox}[wd=\linewidth,ht=2ex,dp=0.7ex]{sthlmYellow}
 	\texttt{sthlmYellow}
@@ -321,6 +324,11 @@ The following ios7 inspired colors structure the sthlm theme.
 \setbeamercolor{sthlmLightYellow}{bg=sthlmLightYellow,fg=black}
 \begin{beamercolorbox}[wd=\linewidth,ht=2ex,dp=0.7ex]{sthlmLightYellow}
 	\texttt{sthlmLightYellow}
+\end{beamercolorbox}
+
+\setbeamercolor{sthlmLightBlue}{bg=sthlmLightBlue,fg=black}
+\begin{beamercolorbox}[wd=\linewidth,ht=2ex,dp=0.7ex]{sthlmLightBlue}
+	\texttt{sthlmLightBlue}
 \end{beamercolorbox}
 
 \setbeamercolor{sthlmBlue}{bg=sthlmBlue,fg=white}
@@ -355,20 +363,15 @@ The following ios7 inspired colors structure the sthlm theme.
 This theme requires that:
 
 \begin{enumerate}
-	\item the beamer presentation is compiled with \XeTeX
+	\item been designed to compile using pdflatex 
 	\item the following three packages are installed
 	\begin{enumerate}
 		\item \texttt{beamer}
 		\item \texttt{pgf}
 		\item \texttt{xcolor}
 	\end{enumerate}
-	\item the following fonts are installed\footnote{Arial will be used if Flama fonts are missing.}
-	\begin{enumerate}
-		\item \quoted{Flama-Light}
-		\item \quoted{Flama-Book}
-		\item \quoted{Flama-Medium}
-	\end{enumerate}
 \end{enumerate}
+
 
 \end{frame}
 
@@ -378,22 +381,17 @@ This theme requires that:
 
 \begin{frame}{Itemized Lists}
 
-This theme requires that:
+This theme has:
 
 \begin{itemize}
-	\item the beamer presentation is compiled with \XeTeX
+	\item been designed to compile using pdflatex 
 	\item the following three packages are installed
 	\begin{itemize}
 		\item \texttt{beamer}
 		\item \texttt{pgf}
 		\item \texttt{xcolor}
 	\end{itemize}
-	\item the following flama fonts are installed \footnote{The flama font is available from \href{http://www.felicianotypefoundry.com/cms/fonts/flama}{http://www.felicianotypefoundry.com/}}
-	\begin{itemize}
-		\item \quoted{Flama-Light}
-		\item \quoted{Flama-Book}
-		\item \quoted{Flama-Medium}
-	\end{itemize}
+	
 \end{itemize}
 
 \end{frame}
@@ -496,7 +494,7 @@ The default Beamer Box
 \begin{frame}{Images with Copyright}
 	\begin{figure}
 		\centering
-		%\includegraphicscopyright[width=\linewidth]{../0-Images/IBDiplomaModel}{Copyright by \href{http://netzlemming.deviantart.com/}{Netzlemming}, \href{http://creativecommons.org/licenses/by-nc/3.0/}{CC BY-NC 3.0 License}}
+		\includegraphicscopyright[width=\linewidth]{photo.jpg}{Copyright by \href{http://netzlemming.deviantart.com/}{Netzlemming}, \href{http://creativecommons.org/licenses/by-nc/3.0/}{CC BY-NC 3.0 License}}
 	\end{figure}
 \end{frame}
 
@@ -531,7 +529,7 @@ The default Beamer Box
 \begin{frame}{Formulas}
 \begin{block}{Fourier Integral}
 \[
-F(\textrm{j}\omega) = \displaystyle \int_{-\infty}^{\infty} \! f(t)\cdot\textrm{e}^{-\textrm{j}\omega t}  \, \mathrm{d} x
+F(\textrm{j}\omega) = \displaystyle \int \limits_{-\infty}^{\infty} \! f(t)\cdot\textrm{e}^{-\textrm{j}\omega t}  \, \mathrm{d} x
 \]
 \end{block}
 \end{frame}
@@ -635,8 +633,6 @@ This theme comes with some options to change it's appearance.
 		\toprule
 		\textbf{Option}			& \textbf{Description} \tabularnewline
 		\midrule
-		\texttt{noflama}		& If the Flama font is missing you can fall back on the Arial default font. \tabularnewline
-		\texttt{noserifmath}		& Math will be typeset with a sans-serif font. \tabularnewline
 		\texttt{nosectionpages} & Section pages will be supressed.\tabularnewline
 		\bottomrule
 	\end{tabularx}
@@ -650,7 +646,7 @@ This theme comes with some options to change it's appearance.
 
 \begin{frame}[containsverbatim]{Presentation Structure}
 
-A section page will be generated and the section name included in the presentation header for each section of the presentation with the current section being empasized.  If you include subsections in your presentation, then a small block will appear under the section name in the header for each frame.  Once a frame has been viewed it will turn green.
+A section page will be generated and the section name included in the presentation header for each section of the presentation with the current section being emphasized.  If you include subsections in your presentation, then a small block will appear under the section name in the header for each frame.  Once a frame has been viewed it will turn green.
 
 It's worth noting that a frame can make up multiple slides.
 
@@ -690,10 +686,10 @@ At any time you can highlight text by using the \lstinline!\alert! definition:
 \begin{itemize}
 	\item \alert{This is super important!}
 \end{itemize}
-The sthlm presentation has both \lstinline!\quoted! and \lstinline!\doublequoted! definitions for quoting text.
+The sthlm presentation has both \lstinline! and \lstinline!! definitions for quoting text.
 \begin{itemize}
-	\item[] \quoted{This text has been quoted}
-	\item[] \doublequoted{This text has been double quoted}
+	\item[] >This text has been quoted<
+	\item[] >>This text has been double quoted<<
 \end{itemize}
 \end{frame}
 
@@ -724,10 +720,6 @@ The sthlm presentation has both \lstinline!\quoted! and \lstinline!\doublequoted
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 \begin{frame}{Multiple Columns}
-
-\end{frame}
-
-\begin{frame}{Multiple Columns}
 	\begin{multicols}{2}
 		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -747,14 +739,14 @@ The sthlm presentation has both \lstinline!\quoted! and \lstinline!\doublequoted
     
 	\beamertemplatebookbibitems
 	\bibitem{Oppenheim2009}
-	Alan~V.~Oppenheim
-	\newblock \doublequoted{Discrete-Time Signal Processing}
+	Alan V. Oppenheim
+	\newblock Discrete - Time Signal Processing
 	\newblock Prentice Hall Press, 2009
 
 	\beamertemplatearticlebibitems
 	\bibitem{EBU2011}
-	European~Broadcasting~Union
-	\newblock \doublequoted{Specification of the Broadcast Wave Format (BWF)}
+	European Broadcasting Union
+	\newblock Specification of the Broadcast Wave Format (BWF)
 	\newblock 2011
   \end{thebibliography}
 \end{frame}
@@ -774,7 +766,7 @@ The sthlm presentation has both \lstinline!\quoted! and \lstinline!\doublequoted
 
 	If you have any questions or comments
 	\begin{itemize}
-		\item \url{sayhi@hendryolson.com}
+		\item \url{mark@hendryolson.com}
 	\end{itemize}
 \end{frame}
 
