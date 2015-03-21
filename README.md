@@ -11,4 +11,4 @@ You should have received a copy of the GNU General Public License along with thi
 
 If you have any questions please direct them to:
 
-[sayhi@hendryolson.com](mailto:sayhi@hendryolson.com)
+[mark@hendryolson.com](mailto:mark@hendryolson.com)
