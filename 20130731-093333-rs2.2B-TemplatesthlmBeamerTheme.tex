@@ -1,46 +1,18 @@
-% Name				sthlm Beamer Theme
+% 	Name		:: 	sthlm Beamer Theme  HEAVILY based on the hsrmbeamer theme (Benjamin Weiss) 
+%	Author		:: 	Mark Hendry Olson (mark@hendryolson.com)
+%	Created		::	2013-07-31
+%	Updated		::	April 19, 2015 at 16:46:26  
+%	Version		:: 	0.5
+%	Email		:: 	mark@hendryolson.com
+%	Website		:: 	http://hendryolson.com
 %
-% Author			Mark Hendry Olson 
+% 	License		:: 	This file may be distributed and/or modified under the
+%                  	GNU Public License.
 %
-% Email				mark@hendryolson.com
-%
-% Website			http://hendryolson.com
-%
-% License                
-%
-%					This program is free software: you can redistribute it and/or modify
-% 					it under the terms of the GNU General Public License as published by
-%					the Free Software Foundation, either version 3 of the License, or
-%					(at your option) any later version.
-%
-%					This program is distributed in the hope that it will be useful,
-%					but WITHOUT ANY WARRANTY; without even the implied warranty of
-%					MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-%					GNU General Public License for more details.
-%
-%					You should have received a copy of the GNU General Public License
-%					along with this program.  If not, see <http://www.gnu.org/licenses/>.
-%
-% Description		This presentation is a demonstration of the sthlm beamer 
-%					theme, which is HEAVILY based on the HSRM beamer theme designed by Benjamin Weiss which can be found 
-%                  	on GitHub <https://github.com/hsrmbeamertheme/hsrmbeamertheme>.
-%                                                      
-% Created			20130731-102346
-% 
-% Log
-%					2014-07-08
-%						-Redesigned for pdfLaTeX using the New PX font
-%						-Removed all IEGS logos and backgrounds
-%						-Released as a WriteLaTeX template
-%
-%					2013-08-01
-%						- Added overlay effect thanks to: <http://www.cgogolin.de/Computer.html>
-%
-%					2013-07-31
-%						- Replaced HSRM beamer theme title page background pdf
-%						- Replaced HSRM beamer theme logo with IEGS apple logo
-%						- Redefined HSRM color theme with an ios7 inspired color scheme
-%						- Changed how mini-frames show subsection progress
+%	Description	::	This presentation is a demonstration of the sthlm beamer 
+%					theme, which is HEAVILY based on the HSRM beamer theme created by Benjamin Weiss 
+%					(benjamin.weiss@student.hs-rm.de), which can be found on GitHub
+%					<https://github.com/hsrmbeamertheme/hsrmbeamertheme>.	
 
 
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
@@ -49,51 +21,32 @@
 %
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
-\documentclass[compress]{beamer}
+\documentclass[compress,PxFont]{beamer}
+%\documentclass[compress]{beamer}
 \usetheme{sthlm}
 
-%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-%        LOADING BEAMER PACKAGES
-%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%        LOADING PACKAGES
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\usepackage[utf8]{inputenc}
 \usepackage{
 booktabs,
 datetime,
 dtklogos,
-graphicx,
-multicol,
 pgfplots,
 ragged2e,
 tabularx,
-tikz,
 wasysym
 }
 
 \pgfplotsset{compat=1.8}
 
-\usepackage[utf8]{inputenc}
-\usepackage{newpxtext,newpxmath}
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%        BEAMER OPTIONS
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
-\usepackage{listings}
-\lstset{ %
-language=[LaTeX]TeX,
-basicstyle=\normalsize\ttfamily,
-keywordstyle=,
-numbers=left,
-numberstyle=\tiny\ttfamily,
-stepnumber=1,
-showspaces=false,
-showstringspaces=false,
-showtabs=false,
-breaklines=true,
-frame=tb,
-framerule=0.5pt,
-tabsize=4,
-framexleftmargin=0.5em,
-framexrightmargin=0.5em,
-xleftmargin=0.5em,
-xrightmargin=0.5em
-}
+\setbeameroption{show notes}
 
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 %        LOADING TIKZ LIBRARIES
@@ -105,31 +58,20 @@ mindmap
 }
 
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-%        BEAMER OPTIONS
-%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-
-\setbeameroption{show notes}
-
-%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-%        BEAMER COMMANDS
-%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-
-
-%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 %
 %	PRESENTATION INFORMATION
 %
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 \title{Stockholm Beamer Theme}
-\subtitle{sthlm is based on the hsrm theme}
+\subtitle{sthlm version 0.6 is based on the hsrm theme}
 \date{\small{\jobname}}
 \author{\texttt{HendryOlson.com}}
 \institute{Made in \textit{Sweden}}
 
 \hypersetup{
 pdfauthor = {Mark H. Olson: mark@hendryolson.com},      
-pdfsubject = {Mathematics, },
+pdfsubject = {},
 pdfkeywords = {},  
 pdfmoddate= {D:\pdfdate},          
 pdfcreator = {}
@@ -176,16 +118,44 @@ pdfcreator = {}
 \begin{frame}{What is Beamer?}
 
 \centerline {Beamer is a \LaTeX\ class for creating beautiful presentations.}  
-\hover<2>{
-      \begin{minipage}{0.8\linewidth}
-      \begin{block}{A block hovering above the slide}
-      	\begin{itemize}
-		\item point 1
-		\item point 2
+
+\begin{block}{The sthlm Beamer Theme:}
+\begin{itemize}
+	\item written using utf8 encoding
+	\item should compile using pdfLaTeX
+\end{itemize}
+\end{block}
+
+\end{frame}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%
+%	SECTION: UPDATESS
+%
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+\section{Updates}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	FRAME: 
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+\begin{frame}[c]{Version 0.6}
+\alert{NeW} in version 0.6
+
+\begin{itemize}
+	\item \texttt{beamerthemesthlm.sty}
+	\begin{itemize}
+		\item Removed log from headeer
+		\item Removed vertically aligned columns support
+		\item Removed listings package support
+		\item Added PxFont option to use the fonts:\footnote{This presentation is using the NewPX fonts}
+		\begin{itemize}
+			\item newpxtext
+			\item newpxmath 
+		\end{itemize}
 	\end{itemize}
-      \end{block}
-      \end{minipage}
-      }
+\end{itemize}
 \end{frame}
 
 
@@ -196,20 +166,14 @@ pdfcreator = {}
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 \section{Structure}
 
-
-%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-%	SUBSECTION: Colors
-%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-\subsection{colors}
-
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 %	FRAME: Primary Presentation Colors
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 \begin{frame}{Primary Presentation Colors}
-The following rainbow of colors brings some life to the sthlm theme.
 
-\begin{multicols}{2}
+\begin{columns}
+\begin{column}{.48\linewidth}
 	
 \setbeamercolor{sthlmLightRed}{fg=sthlmLightRed,bg=white}
 \begin{beamercolorbox}[wd=\linewidth,ht=2ex,dp=0.7ex]{sthlmLightRed}
@@ -236,8 +200,9 @@ The following rainbow of colors brings some life to the sthlm theme.
 	\texttt{sthlmLightGrey}
 \end{beamercolorbox}
 
-% Column Break
+\end{column}
 
+\begin{column}{.48\linewidth}
 \setbeamercolor{sthlmLightRed}{bg=sthlmLightRed,fg=white}
 \begin{beamercolorbox}[wd=\linewidth,ht=2ex,dp=0.7ex]{sthlmLightRed}
 	\texttt{sthlmLightRed}
@@ -262,8 +227,8 @@ The following rainbow of colors brings some life to the sthlm theme.
 \begin{beamercolorbox}[wd=\linewidth,ht=2ex,dp=0.7ex]{sthlmLightGrey}
 	\texttt{sthlmLightGrey}
 \end{beamercolorbox}
-
-\end{multicols}
+\end{column}
+\end{columns}
 \end{frame}
 
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
@@ -271,7 +236,8 @@ The following rainbow of colors brings some life to the sthlm theme.
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 \begin{frame}{Secondary Presentation Colors}
-\begin{multicols}{2}
+\begin{columns}
+\begin{column}{.48\linewidth}
 	
 \setbeamercolor{sthlmRed}{fg=sthlmRed,bg=white}
 \begin{beamercolorbox}[wd=\linewidth,ht=2ex,dp=0.7ex]{sthlmRed}
@@ -308,9 +274,9 @@ The following rainbow of colors brings some life to the sthlm theme.
 	\texttt{sthlmGrey}
 \end{beamercolorbox}
 
+\end{column}
 
-% Column Break
-
+\begin{column}{.48\linewidth}
 \setbeamercolor{sthlmRed}{bg=sthlmRed,fg=black}
 \begin{beamercolorbox}[wd=\linewidth,ht=2ex,dp=0.7ex]{sthlmRed}
 	\texttt{sthlmRed}
@@ -346,28 +312,27 @@ The following rainbow of colors brings some life to the sthlm theme.
 	\texttt{sthlmGrey}
 \end{beamercolorbox}
 
-\end{multicols}
+\end{column}
+\end{columns}
 \end{frame}
 
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-%	SUBSECTION: Lists
-%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-\subsection{lists}
-
-%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-%	FRAME: Enumerated Lists
+%	FRAME: Theme Package Requirements
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
-\begin{frame}{Enumerated Lists}
+\begin{frame}{Theme Package Requirements}
 
 This theme requires that:
 
 \begin{enumerate}
-	\item been designed to compile using pdflatex 
-	\item the following three packages are installed
+	\item it is compiled using pdflatex 
+	\item the following packages are installed
 	\begin{enumerate}
 		\item \texttt{beamer}
+		\item \texttt{eso-pic}
+		\item \texttt[utf8]{inputenc}
 		\item \texttt{pgf}
+		\item \texttt{verbatim}
 		\item \texttt{xcolor}
 	\end{enumerate}
 \end{enumerate}
@@ -376,25 +341,22 @@ This theme requires that:
 \end{frame}
 
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-%	FRAME: Itemized Lists
+%	FRAME: Theme Fonts
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
-\begin{frame}{Itemized Lists}
+\begin{frame}{Theme Fonts}
 
-This theme has:
+To use the newpx fonts option you need the following packages:
 
 \begin{itemize}
-	\item been designed to compile using pdflatex 
-	\item the following three packages are installed
-	\begin{itemize}
-		\item \texttt{beamer}
-		\item \texttt{pgf}
-		\item \texttt{xcolor}
-	\end{itemize}
-	
+	\item newpxtext
+	\item newpxmath
+	\item [T1]fontenc
 \end{itemize}
 
+
 \end{frame}
+
 
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 %	SUBSECTION: Blocks
@@ -413,14 +375,14 @@ The default Beamer Box
 		\item point 2
 	\end{itemize}
 \end{block}
-\begin{lstlisting}
-\begin{block}{Block Title Here}
+\begin{verbatim}
+	\begin{block}{Block Title Here}
 	\begin{itemize}
 		\item point 1
 		\item point 2
 	\end{itemize}
 \end{block}
-\end{lstlisting}
+\end{verbatim}
 \end{frame}
 
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
@@ -431,11 +393,11 @@ The default Beamer Box
 \begin{alertblock}{Alert Block}
 	Highlight important information.
 \end{alertblock}
-\begin{lstlisting}
+\begin{verbatim}
 \begin{alertblock}{Alert Block}
 	Highlight important information.
 \end{alertblock}
-\end{lstlisting}
+\end{verbatim}
 
 \end{frame}
 
@@ -448,11 +410,11 @@ The default Beamer Box
 \begin{exampleblock}{Example Block}
 	Examples can be good.
 \end{exampleblock}
-\begin{lstlisting}
+\begin{verbatim}
 \begin{exampleblock}{Example Block}
 	Examples can be good
 \end{exampleblock}
-\end{lstlisting}
+\end{verbatim}
 \end{frame}
 
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
@@ -461,21 +423,21 @@ The default Beamer Box
 
 \begin{frame}[containsverbatim]{Custom Blocks}
 \begingroup
-\setbeamercolor{block title}{bg=sthlmPurple}
+\setbeamercolor{block title}{fg=black, bg=sthlmGreen}
 \setbeamercolor{block body}{bg=sthlmLightGrey}
-\begin{block}{Purple customization}
+\begin{block}{Green customization}
 	Using the theme colors to generate colored blocks.
 \end{block}
 \endgroup
-\begin{lstlisting}
+\begin{verbatim}
 \begingroup
-\setbeamercolor{block title}{bg=sthlmPurple}
+\setbeamercolor{block title}{fg=black, bg=sthlmGreen}
 \setbeamercolor{block body}{bg=sthlmLightGrey}
 \begin{block}{Custom Blocks}
 	Using the theme colors to generate colored blocks.
 \end{block}
 \endgroup
-\end{lstlisting}
+\end{verbatim}
 \end{frame}
 
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
@@ -599,7 +561,7 @@ F(\textrm{j}\omega) = \displaystyle \int \limits_{-\infty}^{\infty} \! f(t)\cdot
 \begin{frame}{Mindmap made with TikZ}
 \centering
 \begin{tikzpicture}[scale=0.88]
-	\path[mindmap,concept color=sthlmGreen,text=white]
+	\path[mindmap,concept color=sthlmPurple,text=white]
 	node[concept] {\textcolor{white}\TeX}
 	[clockwise from=-30]
 	child[concept color=sthlmBlue,text=white] { node[concept] {\textcolor{white}{\XeTeX}} }
@@ -650,14 +612,14 @@ A section page will be generated and the section name included in the presentati
 
 It's worth noting that a frame can make up multiple slides.
 
-\begin{lstlisting}
+\begin{verbatim}
 \section{Main Section}
 \subsection{Main Subsection}
 \begin{frame}
 \frametitle{Presentation Stucture}
 % Frame Contents Here
 \end{frame}
-\end{lstlisting}
+\end{verbatim}
 \end{frame}
 
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
@@ -666,15 +628,15 @@ It's worth noting that a frame can make up multiple slides.
 
 \begin{frame}[containsverbatim]{Table of Contents}
 Include a listing of the presentation's sections 
-\begin{lstlisting}
+\begin{verbatim}
 \maketitle
-\end{lstlisting}
+\end{verbatim}
 For those longer presentations - keep the table of contents compact.
-\begin{lstlisting}
+\begin{verbatim}
 \begin{frame}{Overview}
-	\tableofcontents[hideallsubsections]
+    \tableofcontents[hideallsubsections]
 \end{frame}
-\end{lstlisting}
+\end{verbatim}
 \end{frame}
 
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
@@ -682,15 +644,11 @@ For those longer presentations - keep the table of contents compact.
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 \begin{frame}[containsverbatim]{Quotations}
-At any time you can highlight text by using the \lstinline!\alert! definition:
+At any time you can highlight text by using the definition:
 \begin{itemize}
 	\item \alert{This is super important!}
 \end{itemize}
-The sthlm presentation has both \lstinline! and \lstinline!! definitions for quoting text.
-\begin{itemize}
-	\item[] >This text has been quoted<
-	\item[] >>This text has been double quoted<<
-\end{itemize}
+
 \end{frame}
 
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
@@ -720,18 +678,21 @@ The sthlm presentation has both \lstinline! and \lstinline!! definitions for quo
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 \begin{frame}{Multiple Columns}
-	\begin{multicols}{2}
+\begin{columns}
+\begin{column}{.48\linewidth}
 		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		cillum dolore eu fugiat nulla pariatur. 
+\end{column}
+\begin{column}{.48\linewidth}
 		\begin{itemize}
         	\item Point 1
         	\item Point 2
 		\end{itemize}
-	\end{multicols}
+	\end{column}
+	\end{columns}
 \end{frame}
 
 \begin{frame}{References}
