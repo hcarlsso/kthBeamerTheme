@@ -1,0 +1,47 @@
+% "theme"
+
+\makeatletter
+\DeclareOptionBeamer{shadow}[true]{\def\beamer@@themerounded@@shadow{#1}}
+\ExecuteOptionsBeamer{shadow=false}
+\ProcessOptionsBeamer
+\makeatother
+
+\usecolortheme{orchid}
+\makeatletter
+\setbeamertemplate{blocks}[rounded][shadow=\beamer@@themerounded@@shadow]
+
+%% \def\beamer@@theme@@footline@@authortitle{
+%%   \defbeamertemplate*{footline}{miniframes theme}
+%%   {%
+%%     \begin{beamercolorbox}[colsep=1.5pt]{upper separation line foot}
+%%     \end{beamercolorbox}
+%%     \begin{beamercolorbox}[ht=2.5ex,dp=1.125ex,%
+%%       leftskip=.3cm,rightskip=.3cm plus1fil]{title in head/foot}%
+%%       \leavevmode{\usebeamerfont{title in head/foot}\insertshorttitle}%
+%%       \hfill%
+%%       {\usebeamerfont{author in head/foot}\usebeamercolor[fg]{author in head/foot}\insertshortauthor}%
+%%     \end{beamercolorbox}%
+%%     \begin{beamercolorbox}[colsep=1.5pt]{lower separation line foot}
+%%     \end{beamercolorbox}
+%%   }
+%% }
+%% \DeclareOptionBeamer{footline}{\csname beamer@@theme@@footline@@authortitle\endcsname}
+%% \ProcessOptionsBeamer
+\makeatother
+
+\setbeamertemplate{sections/subsections in toc}[ball]
+\setbeamertemplate{items}[ball]
+
+\def\em{\color{red}} % \itshape}
+
+\AtBeginSection[]{
+  \begin{slide}{}
+     \[
+     %\psshadowbox[fillstyle=solid,fillcolor=yellow]
+     {\text{\bf\Large\color{blue} \;\insertsection\;}}
+     \]
+  \end{slide}
+}
+\titlegraphic{\includegraphics[height=1.5cm,clip]{kth-logo/CMYK/KTH_Logotyp_CMYK_2013.eps}}
+
+\logo{\includegraphics[height=0.5cm,clip]{kth-logo/CMYK/KTH_Logotyp_CMYK_2013.eps}}

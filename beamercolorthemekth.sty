@@ -1,0 +1,246 @@
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	COLOR PALETTE
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+\ProvidesPackage{beamercolorthemev42}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	OPTIONS
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+\newif\if@beamer@kth@cblock
+\@beamer@kth@cblockfalse
+\DeclareOptionBeamer{cblock}{\@beamer@kth@cblocktrue}
+
+\newif\if@beamer@kth@greybg
+\@beamer@kth@greybgfalse
+\DeclareOptionBeamer{greybg}{\@beamer@kth@greybgtrue}
+
+\DeclareOptionBeamer*{%
+  \PackageWarning{beamercolorthemekth}{Unknown option `\CurrentOption'}%
+}
+
+\ProcessOptionsBeamer
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	STOCKHOLMS COLOR THEME
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+%== BLUE
+	\definecolor{kthLightBlue}{RGB}{214,237,252} % HEX #d6edfc
+		\newcommand{\ckthLightBlue}[1]{{\color{kthLightBlue}{#1}}}
+	\definecolor{kthBlue}{RGB}{0,110,191} % HEX #006ebf
+		\newcommand{\ckthBlue}[1]{{\color{kthBlue}{#1}}}
+	%\definecolor{kthDarkBlue}{RGB}{} %HEX #
+		%\newcommand{\ckthDarkBlue}[1]{{\color{kthDarkBlue}{#1}}}
+
+%== GREEN
+
+	\definecolor{kthLightGreen}{RGB}{213,247,244} % HEX #0d5f7f4
+		\newcommand{\ckthLightGreen}[1]{{\color{kthLightGreen}{#1}}}
+	\definecolor{kthGreen}{RGB}{0,134,127} % #00867f
+		\newcommand{\ckthGreen}[1]{{\color{kthGreen}{#1}}}
+
+%== GREY
+	%\definecolor{kthLightGrey}{RGB}{}
+		%\newcommand{\ckthLightGrey}[1]{{\color{kthLightGrey}{#1}}}
+	\definecolor{kthGrey}{RGB}{245,243,238} % HEX #f5f3ee
+		\newcommand{\ckthGrey}[1]{{\color{kthGrey}{#1}}}
+	\definecolor{kthDarkGrey}{RGB}{51,51,51} % HEX #333333
+		\newcommand{\ckthDarkGrey}[1]{{\color{kthDarkGrey}{#1}}}
+
+%== ORANGE
+	\definecolor{kthLightOrange}{RGB}{255,215,210} % HEX #ffd7d2
+		\newcommand{\ckthLightOrange}[1]{{\color{kthLightOrange}{#1}}}
+	\definecolor{kthOrange}{RGB}{221,74,44} % HEX #dd4a2c
+		\newcommand{\ckthOrange}[1]{{\color{kthOrange}{#1}}}
+
+%== PURPLE
+
+	\definecolor{kthLightPurple}{RGB}{241,230,252} % HEX #f1e6fc
+		\newcommand{\ckthLightPurple}[1]{{\color{kthLightPurple}{#1}}}
+	\definecolor{kthPurple}{RGB}{93,35,125} % HEX #5d237d
+		\newcommand{\ckthPurple}[1]{{\color{kthPurple}{#1}}}
+
+%== RED
+
+	\definecolor{kthLightRed}{RGB}{254,222,237} % HEX #c40064
+		\newcommand{\ckthLightRed}[1]{{\color{kthLightRed}{#1}}}
+	\definecolor{kthRed}{RGB}{196,0,100} % HEX #fedeed
+		\newcommand{\ckthRed}[1]{{\color{kthRed}{#1}}}
+	%\definecolor{kthDarkRed}{RGB}{} % HEX #
+		%\newcommand{\ckthDarkRed}[1]{{\color{kthDarkRed}{#1}}}
+
+%== YELLOW
+
+	%\definecolor{kthLightYellow}{RGB}{}
+		%\newcommand{\ckthLightYellow}[1]{{\color{kthLightYellow}{#1}}}
+	\definecolor{kthYellow}{RGB}{252,191,10} % HEX #fcbf0a
+		\newcommand{\ckthYellow}[1]{{\color{kthYellow}{#1}}}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	ISSR COLORS
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+%== BLUE
+	\definecolor{issrBlue}{RGB}{0,111,174} % HEX #0066cc
+		\newcommand{\cissrBlue}[1]{{\color{issrBlue}{#1}}}
+
+%== GREY
+	\definecolor{issrGrey}{RGB}{167,169,172} % HEX #999999
+		\newcommand{\cissrGrey}[1]{{\color{issrGrey}{#1}}}
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%	GLOBAL COLOR THEME
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+%== BLUE
+
+	\newcommand{\cLightBlue}[1]{{\color{kthLightBlue}{#1}}}
+	\newcommand{\crLightBlue}{\color{kthLightBlue}}
+	\newcommand{\cnLightBlue}{kthLightBlue}
+	\newcommand{\cBlue}[1]{{\color{kthBlue}{#1}}}
+	\newcommand{\crBlue}{\color{kthBlue}}
+	\newcommand{\cnBlue}{kthBlue}
+	%\newcommand{\cDarkBlue}[1]{{\color{}{#1}}}
+	%\newcommand{\crDarkBlue}{\color{}}
+	%\newcommand{\cnDarkBlue}{}
+
+%== GREEN
+
+	%\newcommand{\cLightGreen}[1]{{\color{}{#1}}}
+	%\newcommand{\crLightGreen}{\color{}}
+	\newcommand{\cnLightGreen}{kthLightGreen}
+	\newcommand{\cGreen}[1]{{\color{kthGreen}{#1}}}
+	\newcommand{\crGreen}{\color{kthGreen}}
+	\newcommand{\cnGreen}{kthGreen}
+	%\newcommand{\cDarkGreen}[1]{{\color{}{#1}}}
+	%\newcommand{\crDarkGreen}{\color{}}
+	%\newcommand{\cnDarkGreen}{kthDarkGreen}
+
+%== GREY
+
+	\newcommand{\cLightGrey}[1]{{\color{kthLightGrey}{#1}}}
+	\newcommand{\crLightGrey}{\color{kthLightGrey}}
+	\newcommand{\cnLightGrey}{kthLightGrey}
+	\newcommand{\cGrey}[1]{{\color{kthGrey}{#1}}}
+	\newcommand{\crGrey}{\color{kthGrey}}
+	\newcommand{\cnGrey}{kthGrey}
+	\newcommand{\cDarkGrey}[1]{{\color{kthDarkGrey}{#1}}}
+	\newcommand{\crDarkGrey}{\color{kthDarkGrey}}
+	\newcommand{\cnDarkGrey}{kthDarkGrey}
+
+%== ORANGE
+
+	\newcommand{\cLightOrange}[1]{{\color{kthLightOrange}{#1}}}
+	\newcommand{\crLightOrange}{\color{kthLightOrange}}
+	\newcommand{\cnLightOrange}{kthLightOrange}
+	\newcommand{\cOrange}[1]{{\color{}{#1}}}
+	\newcommand{\crOrange}{\color{kthOrange}}
+	\newcommand{\cnOrange}{kthOrange}
+	%\newcommand{\cDarkOrange}[1]{{\color{}{#1}}}
+	%\newcommand{\crDarkOrange}{\color{}}
+	%\newcommand{\cnDarkOrange}{}
+
+%== PURPLE
+
+	\newcommand{\cLightPurple}[1]{{\color{kthLightPurple}{#1}}}
+	\newcommand{\crLightPurple}{\color{kthLightPurple}}
+	\newcommand{\cnLightPurple}{kthLightPurple}
+	\newcommand{\cPurple}[1]{{\color{kthPurple}{#1}}}
+	\newcommand{\crPurple}{\color{kthPurple}}
+	\newcommand{\cnPurple}{kthPurple}
+	%\newcommand{\cDarkPurple}[1]{{\color{}{#1}}}
+	%\newcommand{\crDarkPurple}{\color{}}
+	%\newcommand{\cnDarkPurple}{}
+
+%== RED
+
+	\newcommand{\cLightRed}[1]{{\color{kthLightRed}{#1}}}
+	\newcommand{\crLightRed}{\color{kthLightRed}}
+	\newcommand{\cnLightRed}{kthLightRed}
+	\newcommand{\cRed}[1]{{\color{kthRed}{#1}}}
+	\newcommand{\crRed}{\color{kthRed}}
+	\newcommand{\cnRed}{kthRed}
+	\newcommand{\cDarkRed}[1]{{\color{kthDarkRed}{#1}}}
+	\newcommand{\crDarkRed}{\color{kthDarkRed}}
+	\newcommand{\cnDarkRed}{kthDarkRed}
+
+%== YELLOW
+
+	%\newcommand{\cLightYellow}[1]{{\color{}{#1}}}
+	%\newcommand{\crLightYellow}{\color{}}
+	%\newcommand{\cnLightYellow}{kthLightYellow}
+	\newcommand{\cYellow}[1]{{\color{kthYellow}{#1}}}
+	\newcommand{\crYellow}{\color{kthYellow}}
+	\newcommand{\cnYellow}{kthYellow}
+	%\newcommand{\cDarkYellow}[1]{{\color{}{#1}}}
+	%\newcommand{\crDarkYellow}{\color{}}
+	%\newcommand{\cnDarkYellow}{}
+
+
+% General
+\setbeamercolor{normal text}{fg=kthDarkGrey}
+\setbeamercolor{structure}{fg=kthDarkGrey}
+\setbeamercolor{alerted text}{fg=kthRed}
+\setbeamercolor{example text}{fg=kthGreen}
+\setbeamercolor{copyright text}{fg=kthPurple}
+
+% Palettes
+\setbeamercolor{palette primary}{fg=kthGrey, bg=kthDarkGrey}
+\setbeamercolor{palette secondary}{fg=kthDarkGrey,bg=kthGrey}
+\setbeamercolor{palette tertiary}{fg=kthLightBlue, bg=kthDarkGrey}
+\setbeamercolor{palette quaternary}{fg=kthGrey, bg=kthBlue}
+\setbeamercolor{mini frame}{bg=kthGrey}
+\setbeamercolor{section in head/foot}{fg=kthDarkGrey, bg=kthGrey}
+
+% Titlepage
+\setbeamercolor{title}{parent=normal text}
+\setbeamercolor{subtitle}{fg=kthBlue}
+\setbeamercolor{institute}{parent=normal text}
+
+% Content
+\setbeamercolor{frametitle}{parent=palette primary}
+
+% Blocks
+\setbeamercolor{block title}{fg=white,bg=kthBlue}
+\setbeamercolor{block body}{fg=kthDarkGrey, bg=kthGrey}
+\setbeamercolor{block title example}{fg=white, bg=kthGreen}
+\setbeamercolor{block body example}{fg=kthDarkGrey, bg=kthLightGreen}
+\setbeamercolor{block title alerted}{fg=white, bg=kthRed}
+\setbeamercolor{block body alerted}{fg=kthDarkGrey, bg=kthLightRed}
+
+% Notes
+\setbeamercolor{note page}{fg=kthDarkGrey,bg=kthGrey}
+\setbeamercolor{note title}{fg=white, bg=kthDarkGrey}
+\setbeamercolor{note date}{parent=note title}
+
+% Page Number
+\setbeamercolor{page number in head/foot}{fg=kthDarkGrey}
+\setbeamercolor{qed}{fg=kthGreen}
+\setbeamercolor{itemize item}{fg=kthBlue}
+\setbeamercolor{itemize subitem}{fg=kthRed}
+\setbeamercolor{itemize subsubitem}{fg=kthPurple}
+
+\if@beamer@kth@greybg
+% General
+\setbeamercolor{normal text}{fg=kthDarkGrey,bg=kthGrey}
+\setbeamercolor{block body}{fg=kthDarkGrey, bg=kthLightBlue}
+\fi
+
+\if@beamer@kth@cblock
+
+\setbeamercolor{block title}{fg=white,bg=kthBlue}
+\setbeamercolor{block body}{fg=kthDarkGrey, bg=kthLightBlue}
+\setbeamercolor{block title example}{fg=white, bg=kthGreen}
+\setbeamercolor{block body example}{fg=kthDarkGrey, bg=kthLightGreen}
+\setbeamercolor{block title alerted}{fg=white, bg=kthRed}
+\setbeamercolor{block body alerted}{fg=kthDarkGrey, bg=kthLightRed}
+
+\setbeamercolor{qed}{fg=kthDarkGrey}
+\setbeamercolor{itemize item}{fg=kthBlue}
+\setbeamercolor{itemize subitem}{fg=kthRed}
+\setbeamercolor{itemize subsubitem}{fg=kthDarkGrey}
+\fi
+
+\mode<all>

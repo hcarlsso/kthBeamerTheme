@@ -1,4 +1,4 @@
-% 	Name		:: 	sthlm Beamer Theme  HEAVILY based on the hsrmbeamer theme (Benjamin Weiss)
+% 	Name		:: 	kth Beamer Theme  HEAVILY based on the hsrmbeamer theme (Benjamin Weiss)
 %	Author		:: 	Mark Hendry Olson (mark@hendryolson.com)
 %	Created		::	2013-07-31
 %	Updated		::	June 23, 2015 at 23:58
@@ -9,7 +9,7 @@
 % 	License		:: 	This file may be distributed and/or modified under the
 %                  	GNU Public License.
 %
-%	Description	::	This presentation is a demonstration of the sthlm beamer
+%	Description	::	This presentation is a demonstration of the kth beamer
 %					theme, which is HEAVILY based on the HSRM beamer theme created by Benjamin Weiss
 %					(benjamin.weiss@student.hs-rm.de), which can be found on GitHub
 %					<https://github.com/hsrmbeamertheme/hsrmbeamertheme>.
@@ -31,7 +31,7 @@
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 %	01. PACKAGE OPTIONS & SETUP
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-\ProvidesPackage{beamerthemesthlm}
+\ProvidesPackage{beamerthemekth}
 
 \newif\if@useTitleProgressBar
 \@useTitleProgressBartrue
@@ -41,17 +41,17 @@
 \@protectFrameTitlefalse
 \DeclareOptionBeamer{protectframetitle}{\@protectFrameTitletrue}
 
-\newif\if@dosthlmFooter
-\@dosthlmFooterfalse
-\DeclareOptionBeamer{sthlmFooter}{\@dosthlmFootertrue}
+\newif\if@dokthFooter
+\@dokthFooterfalse
+\DeclareOptionBeamer{kthFooter}{\@dokthFootertrue}
 
 \newif\if@donewPxFont
 \@donewPxFontfalse
 \DeclareOptionBeamer{newPxFont}{\@donewPxFonttrue}
 
-\newif\if@dosthlmStadFont
-\@dosthlmStadFontfalse
-\DeclareOptionBeamer{sthlmStadFont}{\@dosthlmStadFonttrue}
+\newif\if@dokthStadFont
+\@dokthStadFontfalse
+\DeclareOptionBeamer{kthStadFont}{\@dokthStadFonttrue}
 
 \newif\if@dovaligncolumns
 \@dovaligncolumnsfalse
@@ -61,14 +61,14 @@
 \@doSectionPagetrue
 \DeclareOptionBeamer{nosectionpage}{\@doSectionPagefalse}
 
-\DeclareOptionBeamer{nooffset}{\setlength{\@sthlm@voffset}{0em}}
+\DeclareOptionBeamer{nooffset}{\setlength{\@kth@voffset}{0em}}
 
 \DeclareOptionBeamer*{%
-  \PackageWarning{beamerthemesthlm}{Unknown option `\CurrentOption'}%
+  \PackageWarning{beamerthemekth}{Unknown option `\CurrentOption'}%
 }
 
-\newlength{\@sthlm@voffset}
-\setlength{\@sthlm@voffset}{2em}
+\newlength{\@kth@voffset}
+\setlength{\@kth@voffset}{2em}
 
 \ProcessOptionsBeamer
 \mode<presentation>
@@ -91,7 +91,7 @@
 \usetikzlibrary{backgrounds}
 \usetikzlibrary{calc}
 
-\lstnewenvironment{sthlmLatex}
+\lstnewenvironment{kthLatex}
 {\lstset{
 language=[LaTeX]TeX,
 basicstyle=\small\ttfamily,
@@ -140,7 +140,7 @@ basicstyle=\small\ttfamily,
 \newcommand{\dydt}{\dfrac{\mathrm{d}y}{\mathrm{d}t}}
 \newcommand{\dxdt}{\dfrac{\mathrm{d}x}{\mathrm{d}t}}
 \newcommand{\vect}[1]{\boldsymbol{#1}}
-\newcommand{\farg}[1]{{\color{sthlmBlue}{\left[\boldsymbol{#1}\right]}}}
+\newcommand{\farg}[1]{{\color{kthBlue}{\left[\boldsymbol{#1}\right]}}}
 \newcommand{\sname}[1]{\texttt{#1}}
 \newcommand{\set}[1]{\left\{#1\right\}}
 \newcommand{\inv}{^{-1}}
@@ -179,8 +179,10 @@ xrightmargin=0.5em
 %	03. COLOR AND FONT THEMES (BEAMER)
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
-\usecolortheme{sthlm}
-\usefonttheme{sthlm}
+\usecolortheme{kth}
+\usefonttheme{kth}
+
+\newcommand{\kthlogoeps}{kth-logo/CMYK/KTH_Logotyp_CMYK_2013.eps}
 
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 %	04. TITLE PAGE
@@ -202,7 +204,8 @@ xrightmargin=0.5em
     {\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par}%
     \vspace*{0.5em}
     \fi%
-    \begin{tikzpicture}\draw[normal text.fg] (0, 0) -- (\textwidth, 0);\end{tikzpicture}%
+    \begin{tikzpicture}\draw[normal text.fg] (0, 0) -- (\textwidth,
+      0);\end{tikzpicture}%
     \vspace*{1em}
     \ifx\insertauthor\@empty%
     \else%
@@ -211,7 +214,8 @@ xrightmargin=0.5em
     \fi%
     \ifx\insertdate\@empty%
     \else%
-    {\usebeamerfont{date}\usebeamercolor[fg]{date}Updated: \insertdate\par\small{\jobname}\par}%
+    {\usebeamerfont{date}\usebeamercolor[fg]{date}Updated:
+      \insertdate\par\small{\jobname}\par}%
     \fi%
     \ifx\insertinstitut\@empty%
     \else%
@@ -219,7 +223,8 @@ xrightmargin=0.5em
     {\usebeamerfont{institute}\usebeamercolor[fg]{institute}\insertinstitute\par}%
     \fi%
     \vfill
- 	\hfill \includegraphics[height=10mm]{stockholmstad} \hspace{5mm} \includegraphics[height=10mm]{issr} \par
+        \hfill \includegraphics[height=10mm]{\kthlogoeps}
+        %\hspace{5mm} \includegraphics[height=10mm]{issr} \par
     \vspace*{5mm}
   \end{minipage}
 }
@@ -326,22 +331,25 @@ xrightmargin=0.5em
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 \usenavigationsymbolstemplate{}
 
-\if@dosthlmFooter
+\if@dokthFooter
 \setbeamertemplate{footline}{
 \hbox{
-\begin{beamercolorbox}[wd=0.25\textwidth,dp=1.5ex,leftskip=0.3cm,rightskip=0.3cm]{structure}
-\includegraphics[width=0.25\textwidth]{stockholmstad}
+\begin{beamercolorbox}[wd=0.45\textwidth,dp=0.1cm,leftskip=0.1cm,rightskip=1.0cm]{structure}
+\includegraphics[width=0.1\textwidth]{\kthlogoeps}
+%\hfill {{Kungliga Tekniska Högskolan}}
 \end{beamercolorbox}
-\begin{beamercolorbox}[wd=0.75\textwidth, dp=1.5ex,leftskip=0.3cm,rightskip=0.3cm plus1fil]{structure}
+\begin{beamercolorbox}[wd=0.55\textwidth,
+  dp=1.5ex,leftskip=0.3cm,rightskip=0.3cm plus1fil]{structure}
 \usebeamerfont{page number in head/foot}
-\hfill\insertdate \newline
+%\hfill\insertdate \newline
 
 \vspace*{1em}
 
-\hfill Sid \insertframenumber
+\hfill Slide \insertframenumber
 \vspace*{1em}
 \end{beamercolorbox}
 }}
+
 \else%
 \usenavigationsymbolstemplate{}
 \fi%
@@ -374,7 +382,7 @@ xrightmargin=0.5em
     \progressbar@titleprogressbar
   \end{beamercolorbox}
 \fi
-\vspace{\@sthlm@voffset}
+\vspace{\@kth@voffset}
 }
 
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
