@@ -1,35 +1,33 @@
-% 	Name		:: 	kth Beamer Theme  HEAVILY based on the hsrmbeamer theme (Benjamin Weiss)
-%	Author		:: 	Mark Hendry Olson (mark@hendryolson.com)
-%	Created		::	2013-07-31
-%	Updated		::	June 23, 2015 at 23:58
-%	Version		:: 	1.0.0
-%	Email		:: 	mark@hendryolson.com
-%	Website		:: 	http://hendryolson.com
+% Name      :: KTH Beamer Theme
+% Created   :: 2016-10-07
+% Version   :: 0.0.1
 %
-% 	License		:: 	This file may be distributed and/or modified under the
-%                  	GNU Public License.
+%License    :: This file may be distributed and/or modified under the
+%              GNU Public License.
 %
-%	Description	::	This presentation is a demonstration of the kth beamer
-%					theme, which is HEAVILY based on the HSRM beamer theme created by Benjamin Weiss
-%					(benjamin.weiss@student.hs-rm.de), which can be found on GitHub
-%					<https://github.com/hsrmbeamertheme/hsrmbeamertheme>.
+% Description :: This theme is a rebrand of the [sthlm] theme (Mark Hendry
+%                Olson), which in turn is based on [hsrmbeamer] theme
+%                (Benjamin Weiss)
 %
-%	Contents	::	01. PACKAGE OPTIONS & SETUP
-%					02. PACKAGES & TIKZ
-%					03. COLOR AND FONT THEMES (BEAMER)
-%					04. TITLE PAGE
-%					05. TABLE OF CONTENTS
-%					06. PROGRESS BAR & HEADLINE
-%					07. SECTION PAGES
-%					08. ITEMIZE
-%					09. FOOTLINE
-%					10. CAPTIONS
-%					11. FRAME TITLE
-%					12. IMAGES
-%					13. BLOCKS
+%                [hsrmbeamer]: https://github.com/hsrmbeamertheme/hsrmbeamertheme
+%                [sthlm]: https://github.com/hendryolson/sthlmBeamerTheme/
+%
+% Contents  ::  01. PACKAGE OPTIONS & SETUP
+%         02. PACKAGES & TIKZ
+%         03. COLOR AND FONT THEMES (BEAMER)
+%         04. TITLE PAGE
+%         05. TABLE OF CONTENTS
+%         06. PROGRESS BAR & HEADLINE
+%         07. SECTION PAGES
+%         08. ITEMIZE
+%         09. FOOTLINE
+%         10. CAPTIONS
+%         11. FRAME TITLE
+%         12. IMAGES
+%         13. BLOCKS
 
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-%	01. PACKAGE OPTIONS & SETUP
+% 01. PACKAGE OPTIONS & SETUP
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 \ProvidesPackage{beamerthemekth}
 
@@ -74,7 +72,7 @@
 \mode<presentation>
 
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-%	02. PACKAGES & TIKZ
+% 02. PACKAGES & TIKZ
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 \RequirePackage{amsmath}
 \RequirePackage{tikz}
@@ -121,7 +119,7 @@ basicstyle=\small\ttfamily,
 }
 
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-%	GLOBAL MATH
+% GLOBAL MATH
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 \newcommand{\limit}{\displaystyle\lim}
@@ -151,7 +149,7 @@ basicstyle=\small\ttfamily,
 \newcommand{\khat}{\hat{k}}
 
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-%	LISTINGS PACKAGE
+% LISTINGS PACKAGE
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 \usepackage{listings}
@@ -176,7 +174,7 @@ xrightmargin=0.5em
 }
 
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-%	03. COLOR AND FONT THEMES (BEAMER)
+% 03. COLOR AND FONT THEMES (BEAMER)
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 \usecolortheme{kth}
@@ -185,7 +183,7 @@ xrightmargin=0.5em
 \newcommand{\kthlogoeps}{kth-logo/CMYK/KTH_Logotyp_CMYK_2013.eps}
 
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-%	04. TITLE PAGE
+% 04. TITLE PAGE
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 \def\maketitle{\ifbeamer@inframe\titlepage\else\frame[plain]{\titlepage}\fi}
 
@@ -230,13 +228,13 @@ xrightmargin=0.5em
 }
 
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-%	05. TABLE OF CONTENTS
+% 05. TABLE OF CONTENTS
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 \setbeamertemplate{section in toc}[sections numbered]
 \setbeamertemplate{subsection in toc}[subsections numbered]
 
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-%	06. PROGRESS BAR & HEADLINE
+% 06. PROGRESS BAR & HEADLINE
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 \makeatletter
 \def\progressbar@sectionprogressbar{}
@@ -297,7 +295,7 @@ xrightmargin=0.5em
 \fi
 
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-%	07. SECTION PAGES
+% 07. SECTION PAGES
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 \if@doSectionPage
 \newcommand{\insertsectionHEAD}{%
@@ -319,7 +317,7 @@ xrightmargin=0.5em
 \fi
 
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-%	08. ITEMIZE
+% 08. ITEMIZE
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 \setbeamertemplate{itemize item}{$\Circle$}
 \setbeamertemplate{itemize subitem}{$\circ$}
@@ -327,7 +325,7 @@ xrightmargin=0.5em
 \setlength{\parskip}{0.5em}
 
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-%	09. FOOTLINE
+% 09. FOOTLINE
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 \usenavigationsymbolstemplate{}
 
@@ -355,12 +353,12 @@ xrightmargin=0.5em
 \fi%
 
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-%	10. CAPTIONS
+% 10. CAPTIONS
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 \setbeamertemplate{caption label separator}{: }
 
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-%	11. FRAME TITLE
+% 11. FRAME TITLE
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 \setbeamertemplate{frametitle}{%
 \nointerlineskip
@@ -386,7 +384,7 @@ xrightmargin=0.5em
 }
 
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-%	12. IMAGES
+% 12. IMAGES
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 \newbox\mytempbox
 \newdimen\mytempdimen
@@ -398,7 +396,7 @@ xrightmargin=0.5em
 }}
 
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-%	13. BLOCKS
+% 13. BLOCKS
 %-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 \setbeamertemplate{block begin}
 {
